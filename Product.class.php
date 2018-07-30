@@ -48,7 +48,12 @@
             } else {
                 return $this->price;
             }
-        }        
+        } 
+
+        public function getName()
+        {
+            return $this->name;
+        }       
 
         public function showFullInfo()
         {

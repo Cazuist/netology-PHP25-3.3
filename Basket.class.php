@@ -3,17 +3,17 @@
 
     class Basket  implements \ArrayAccess
     {
-        public $itemsList = [];
+        private $itemsList = [];
         
         public function offsetSet($i, $product)
         {
-            if (!empty($product->getPrice())) {
+            /*if (!empty($product->getPrice())) {*/
                 if(is_null($i)) {
                     $this->itemsList[] = $product;
                 } else {
                    $this->itemsList[$i] = $product; 
                 }
-            }
+            /*}*/
         }
 
         public function offsetGet($i)
